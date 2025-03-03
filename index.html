@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PANG-PANG - Kulit Lumpia Goreng</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts (opsional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" 
+    rel="stylesheet"
+  >
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Responsive Navbar (menggunakan collapse Bootstrap) -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo Produk di pojok kiri atas -->
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="Logo Produk" class="logo-img me-2">
+        PANG-PANG
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#produk">Produk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="chat.html">Chat</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Kulit Lumpia Goreng</h2>
+        <p>Nikmati sensasi renyah dan gurih dengan berbagai varian rasa!</p>
+        <a href="#produk" class="btn-primary">Lihat Produk</a>
+      </div>
+    </section>
+    
+    <!-- PRODUK SECTION -->
+    <section id="produk" class="produk-section">
+      <h2>Varian Kulit Lumpia Goreng</h2>
+      <div class="produk-container">
+        <!-- Produk Card 1 -->
+        <div class="produk-card">
+          <img src="img/lumer.png" alt="Kulit Lumpia Goreng Lumer">
+          <h3>Lumer</h3>
+          <p class="price">Rp7.000</p>
+          <p class="desc">Sensasi meleleh di mulut dengan bumbu spesial.</p>
+        </div>
+        <!-- Produk Card 2 -->
+        <div class="produk-card">
+          <img src="img/dinosaur.png" alt="Kulit Lumpia Goreng Dinosaurus">
+          <h3>Dinosaurus</h3>
+          <p class="price">Rp7.000</p>
+          <p class="desc">Tekstur unik dan renyah, bikin ketagihan!</p>
+        </div>
+        <!-- Produk Card 3 -->
+        <div class="produk-card">
+          <img src="img/original.png" alt="Kulit Lumpia Goreng Original">
+          <h3>Original</h3>
+          <p class="price">Rp5.000</p>
+          <p class="desc">Rasa klasik yang gurih, cocok untuk segala suasana.</p>
+        </div>
+        <!-- Produk Card 4 -->
+        <div class="produk-card">
+          <img src="img/pedas.png" alt="Kulit Lumpia Goreng Pedas">
+          <h3>Pedas</h3>
+          <p class="price">Rp5.000</p>
+          <p class="desc">Pedas mantap yang menggugah selera!</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- KONTAK SECTION -->
+    <section id="kontak" class="kontak-section">
+      <h2>Hubungi Kami</h2>
+      <p>Ingin memesan atau ada pertanyaan? Silakan hubungi kami:</p>
+      <div class="kontak-info">
+        <p><strong>Telepon/WA:</strong> <a href="http://wa.me/+6285156833145">0851-5683-3145</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/pang_pangofficial?igsh=MXRhaWduc3o2N21xcQ==" target="_blank">@pang_pangofficial</a></p>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Pang-Pang. All rights reserved.</p>
+  </footer>
+  
+  <!-- Bootstrap JS Bundle (termasuk Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Registrasi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="register-container">
+    <h2>Form Registrasi</h2>
+    <form action="proses_registrasi.php" method="POST" enctype="multipart/form-data">
+      <input type="text" class="register-input" name="nama" placeholder="Nama" required>
+      <input type="email" class="register-input" name="email" placeholder="Email" required>
+      <input type="text" class="register-input" name="username" placeholder="Username" required>
+      <input type="password" class="register-input" name="password" placeholder="Password" required minlength="6">
+      <input type="password" class="register-input" name="konfirmasi_password" placeholder="Konfirmasi Password" required minlength="6">
+      <input type="file" class="register-input" name="foto" accept="image/*" required>
+      <button type="submit" class="register-button">Registrasi</button>
+    </form>
+    <p class="login-link">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+  </div>
+</body>
+</html>

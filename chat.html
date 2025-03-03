@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2 class="chat-title">Chat Sederhana</h2>
+        <div class="chat-box" id="chatBox">
+          <!-- Pesan akan muncul di sini -->
+        </div>
+        <div class="chat-input">
+          <input type="text" id="userInput" placeholder="Ketik pesan Anda..." />
+          <button onclick="sendMessage()">Kirim</button>
+        </div>
+      </div>
+    
+      <script>
+        // Fungsi untuk menambahkan pesan ke chatBox
+        function appendMessage(sender, text) {
+          const chatBox = document.getElementById('chatBox');
+          
+          const messageDiv = document.createElement('div');
+          messageDiv.classList.add('message', sender);
+    
+          const messageContent = document.createElement('div');
+          messageContent.classList.add('message-content');
+          messageContent.textContent = text;
+    
+          messageDiv.appendChild(messageContent);
+          chatBox.appendChild(messageDiv);
+    
+          // Scroll ke pesan paling bawah
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    
+        // Fungsi untuk menentukan balasan bot
+        function getBotResponse(message) {
+          const lowerMsg = message.toLowerCase();
+          if (lowerMsg.includes("halo")) {
+            return "Halo! Ada yang bisa saya bantu?";
+          } else if (lowerMsg.includes("apa kabar")) {
+            return "Saya baik, terima kasih!";
+          } else if (lowerMsg.includes("siapa namamu")) {
+            return "Saya Chatbot Sederhana.";
+          } else {
+            return "Maaf, saya belum mengerti pertanyaan Anda.";
+          }
+        }
+    
+        // Fungsi untuk mengirim pesan
+        function sendMessage() {
+          const inputField = document.getElementById('userInput');
+          const message = inputField.value.trim();
+          if (!message) return;
+    
+          // Tampilkan pesan user
+          appendMessage('user', message);
+    
+          // Kosongkan input
+          inputField.value = '';
+    
+          // Dapatkan respon bot (setelah jeda 500ms untuk kesan realistis)
+          setTimeout(() => {
+            const botReply = getBotResponse(message);
+            appendMessage('bot', botReply);
+          }, 500);
+        }
+    
+        // Kirim pesan dengan menekan Enter
+        document.getElementById('userInput').addEventListener('keyup', function(e) {
+          if (e.key === 'Enter') {
+            sendMessage();
+          }
+        });
+      </script>
+</body>
+</html>

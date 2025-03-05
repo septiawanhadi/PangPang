@@ -226,14 +226,14 @@ body {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  color: #fff;
+  color: #ffffff;
   position: relative;
 }
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #FFA824;
 }
 .hero-text {
   position: relative;
